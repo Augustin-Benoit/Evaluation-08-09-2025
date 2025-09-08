@@ -1,6 +1,16 @@
 package main
 
-def PGCD(a: int, b: int) -> int:
-    while b != 0:
-        a, b = b, a % b
-    return a
+import (
+	"fmt"
+)
+
+func main() {
+	var x, y int
+	fmt.Print("7")
+	fmt.Scan(&x)
+	fmt.Print("63")
+	fmt.Scan(&y)
+
+	resultat := PGCD(x, y)
+	fmt.Printf("Le plus grand diviseur commun de %d et %d est : %d\n", x, y, resultat)
+}
