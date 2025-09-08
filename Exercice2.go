@@ -1,12 +1,21 @@
-package student
+package main
 
-func IsAlpha(s string) bool {
-	for _, r := range s {
-		if (r < 'A' || r > 'Z') && (r < 'a' || r > 'z') {
-			if r < '0' || r > '9' {
-				return false
-			}
+import (
+	"fmt"
+)
+
+func CompterLettres(s string) int {
+	compteur := 0
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') {
+			compteur++
 		}
 	}
-	return true
+	return compteur
+}
+
+func main() {
+	chaine := "Bonjour le monde ! 123 😊 Ça va ?"
+	fmt.Println("Nombre de lettres latines :", CompterLettres(chaine))
 }
