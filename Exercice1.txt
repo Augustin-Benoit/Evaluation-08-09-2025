@@ -1,0 +1,37 @@
+La première ligne indique que le fichier appartient au package student, en Go, un package est un regroupement logique de fonctions et de types. Ici, c’est probablement utilisé dans le cadre d’un projet d’étudiant.
+
+Utilité de la fonction Surprise :
+
+Elle prend en paramètre une chaîne de caractères s (de type string)
+
+Elle retourne une valeur de type bool (soit true, soit false)
+
+Son but est de vérifier si la chaîne contient au moins une lettre alphabétique (a–z ou A–Z)
+
+Utilité de la fonction len
+
+On vérifie si la chaîne est vide (len(s) < 1)
+
+Si oui, on retourne false car une chaîne vide ne contient aucune lettre
+
+s[0] correspond au premier caractère de la chaîne (sous forme de byte)
+
+surpriseAnnexe(s[0]) : on vérifie si ce caractère est une lettre
+
+s[1:] : c’est le reste de la chaîne à partir du deuxième caractère
+
+Surprise(s[1:]) : appel récursif sur le reste de la chaîne
+
+Si le premier caractère est une lettre → on retourne true
+
+Sinon, on continue à tester le reste de la chaîne jusqu’à trouver une lettre ou atteindre la fin
+
+true si c’est une lettre de l’alphabet (majuscule ou minuscule)
+
+false sinon
+
+Cette condition vérifie si a est :
+
+soit entre 'a' et 'z' (lettres minuscules),
+
+soit entre 'A' et 'Z' (lettres majuscules).
